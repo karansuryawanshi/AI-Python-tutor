@@ -3,7 +3,7 @@
 This project is designed to provide an interactive AI tutor experience using Python, incorporating 3D models and animations. Built with React and Tailwind CSS, the project leverages modern web technologies to create a responsive and engaging learning environment.
 
 ## Project Structure
-
+```bash 
 karansuryawanshi-ai-python-tutor/
 ├── README.md # Project overview
 ├── package.json # Project dependencies and scripts
@@ -25,7 +25,7 @@ karansuryawanshi-ai-python-tutor/
 ├── need_some_space.glb # 3D model for space animation
 ├── robot_playground.glb # 3D model for robot playground animation
 └── tom_cat_swing_dancing.glb # 3D model for dancing cat animation
-s
+```
 
 ## Features
 
