@@ -3,7 +3,8 @@
 This project is designed to provide an interactive AI tutor experience using Python, incorporating 3D models and animations. Built with React and Tailwind CSS, the project leverages modern web technologies to create a responsive and engaging learning environment.
 
 ## Project Structure
-```bash 
+
+```bash
 karansuryawanshi-ai-python-tutor/
 ├── README.md # Project overview
 ├── package.json # Project dependencies and scripts
