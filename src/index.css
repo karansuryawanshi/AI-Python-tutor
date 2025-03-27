@@ -19,3 +19,7 @@ code {
 body {
   font-family: "Nunito", sans-serif;
 }
+
+#globe {
+  position: fixed;
+}
