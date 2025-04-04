@@ -6,47 +6,35 @@ import brain from "../assets/brain.png";
 import book from "../assets/book.png";
 import Python from "../assets/python.svg";
 import Typewrite from "../components/Typewrite";
+import Brain_logo from "../assets/brain_icon.png";
+import * as THREE from "three";
+import Spline from "@splinetool/react-spline";
 import {
   useScroll,
   useMotionValueEvent,
   useTransform,
   motion,
 } from "framer-motion";
-// import { TimelineDemo } from "../components/TimeLime";
-
-const Spline = React.memo(
-  React.lazy(() => import("@splinetool/react-spline")),
-  (prevProps, nextProps) => prevProps.scene === nextProps.scene
-);
+import ML_logo from "../assets/AI_logo.png";
+import AI_logo from "../assets/statistic.png";
 
 const Home = () => {
   const navigate = useNavigate();
   const [showGlobe, setShowGlobe] = useState(false);
   const { scrollY } = useScroll();
 
-  // Move #globe left when scrollY reaches 811
   const globeLeft = useTransform(
     scrollY,
     [0, 790, 1007],
     ["28rem", "-30rem", "-30rem"]
   );
 
-  // const globehidden = useTransform(
-  //   scrollY,
-  //   [0, 790, 1007, 1968],
-  //   ["28rem", "-30rem", "-30rem", "-30rem"]
-  // );
-
   const isHidden = useTransform(scrollY, [0, 2010], ["visible", "hidden"]);
   const globeOpacity = useTransform(scrollY, [1900, 2020], [1, 0]);
-  const globeScale = useTransform(scrollY, [1950, 2010], [1, 0]);
-
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   console.log("Page scroll: ", latest);
-  // });
+  const globeScale = useTransform(scrollY, [1550, 2010], [1, 0]);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowGlobe(true), 2000);
+    const timer = setTimeout(() => setShowGlobe(true), 0);
     return () => clearTimeout(timer);
   }, []);
 
@@ -58,19 +46,16 @@ const Home = () => {
           <Spline scene="https://prod.spline.design/paksGGxigyE8WS0h/scene.splinecode" />
         </main>
 
-        {showGlobe && (
-          <motion.div
-            id="globe"
-            className="fixed top-10 overflow-hidden pointer-events-none rounded-full flex w-full h-full z-50 will-change-transform"
-            style={{
-              left: globeLeft,
-              // visibility: isHidden,
-              scale: globeScale,
-            }}
-          >
-            <Spline scene="https://prod.spline.design/qHL4nUEP1Txyp5f6/scene.splinecode" />
-          </motion.div>
-        )}
+        <motion.div
+          id="globe"
+          className="fixed top-10 overflow-hidden pointer-events-none rounded-full flex w-full h-full z-50 will-change-transform"
+          style={{
+            left: globeLeft,
+            scale: globeScale,
+          }}
+        >
+          <Spline scene="https://prod.spline.design/qHL4nUEP1Txyp5f6/scene.splinecode" />
+        </motion.div>
 
         <div
           id="info-box"
@@ -174,7 +159,7 @@ const Home = () => {
           </div>
         </div>
         <div className="bg-[#0f0f0f] text-white pt-10">
-          <div className="">
+          <div className="flex items-center justify-center">
             <div className="w-1/2 flex items-end justify-center">
               <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2">
                 <div className="w-16 h-16 text-white">
@@ -192,6 +177,67 @@ const Home = () => {
 
             <div className="w-1/2">
               <Typewrite />
+            </div>
+          </div>
+          {/* --------------------------------------------------------------------- */}
+          <div className="flex items-center justify-center">
+            <div className="w-1/2">
+              <Typewrite />
+            </div>
+            <div className="w-1/2 flex items-end justify-center">
+              <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2">
+                <div className="w-16 h-16 text-white">
+                  <img src={Brain_logo} alt="" />
+                </div>
+                <h3 className="text-xl">Machine Learning</h3>
+                <p className="text-justify text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ea esse quisquam ad debitis aut illum assumenda nulla
+                  obcaecati doloribus, nesciunt perspiciatis corrupti laborum
+                  odit, suscipit ullam laudantium consectetur amet?
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* ===================================================================== */}
+          <div className="flex items-center justify-center">
+            <div className="w-1/2 flex items-end justify-center">
+              <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2">
+                <div className="w-16 h-16 text-white">
+                  <img src={AI_logo} alt="" />
+                </div>
+                <h3 className="text-xl">Data Science</h3>
+                <p className="text-justify text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ea esse quisquam ad debitis aut illum assumenda nulla
+                  obcaecati doloribus, nesciunt perspiciatis corrupti laborum
+                  odit, suscipit ullam laudantium consectetur amet?
+                </p>
+              </div>
+            </div>
+
+            <div className="w-1/2">
+              <Typewrite />
+            </div>
+          </div>
+          {/* ======================================================================== */}
+          <div className="flex items-center justify-center">
+            <div className="w-1/2">
+              <Typewrite />
+            </div>
+            <div className="w-1/2 flex items-end justify-center">
+              <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2">
+                <div className="w-16 h-16 text-white">
+                  <img src={ML_logo} alt="" />
+                </div>
+                <h3 className="text-xl">Artificial Intelligence</h3>
+                <p className="text-justify text-lg">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                  ea esse quisquam ad debitis aut illum assumenda nulla
+                  obcaecati doloribus, nesciunt perspiciatis corrupti laborum
+                  odit, suscipit ullam laudantium consectetur amet?
+                </p>
+              </div>
             </div>
           </div>
         </div>

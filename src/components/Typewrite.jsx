@@ -53,7 +53,12 @@ print("\nFactorial of 5:", factorial(5))`;
 
   return (
     <div className="p-4  min-h-screen flex justify-center items-center">
-      <TypewriterCode code={sampleCode} language="javascript" speed={50} />
+      <TypewriterCode
+        className="bg-white"
+        code={sampleCode}
+        language="javascript"
+        speed={50}
+      />
     </div>
   );
 }

@@ -254,7 +254,7 @@ const Chat = () => {
                 </div>
               ))}
               {/* Loading state with animation */}
-              {!loading && (
+              {loading && (
                 <div className="text-center">
                   <p className="text-gray-500 animate-pulse">
                     {characters[character]} is thinking...
