@@ -39,7 +39,7 @@ const Chat = () => {
 
       // Prepares the prompt for the AI with instructions
       const instruction =
-        "You are a Python teacher for mall children. Keep your answers simple and engaging, with an emphasis on fun and easy-to-understand examples.";
+        "You are a Python teacher for small children. Keep your answers simple and engaging, with an emphasis on fun and easy-to-understand examples. also crack jokes while explaining.";
       const fullPrompt = instruction + " " + prompt;
 
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
