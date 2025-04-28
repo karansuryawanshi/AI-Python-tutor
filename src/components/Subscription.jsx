@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { animate, motion, AnimatePresence } from "framer-motion";
 import Switch from "react-switch";
+import { useNavigate } from "react-router-dom";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -59,8 +60,14 @@ const Subscription = () => {
   const [platinum, setPlatinum] = useState("99");
   const [plan, setPlan] = useState("month");
 
+  const navigate = useNavigate();
+
   const handleChange = (nextChecked) => {
     setChecked(nextChecked);
+  };
+
+  const navigateSubscription = () => {
+    navigate("/subscription");
   };
   return (
     <div className="">
@@ -165,6 +172,9 @@ const Subscription = () => {
                 ✔️ Monthly progress reports
               </motion.li>
               <motion.button
+                onClick={() => {
+                  navigateSubscription();
+                }}
                 className="bg-[#cbd5e0] text-slate-800 mx-4 my-2 w-11/12 px-2 py-2 rounded-lg"
                 variants={buttonVariants}
                 whileHover="hover"
@@ -260,6 +270,9 @@ const Subscription = () => {
                 ✔️ Project recommendations
               </motion.li>
               <motion.button
+                onClick={() => {
+                  navigateSubscription();
+                }}
                 className="bg-yellow-200 text-slate-800 mx-4 my-2 w-11/12 px-2 py-2 rounded-lg"
                 variants={buttonVariants}
                 whileHover="hover"
@@ -318,6 +331,9 @@ const Subscription = () => {
                 </motion.li>
               ))}
               <motion.button
+                onClick={() => {
+                  navigateSubscription();
+                }}
                 className="bg-gradient-to-tr from-[#a0aec0] to-[#718096] text-slate-800 mx-4 my-2 w-11/12 px-2 py-2 rounded-lg"
                 variants={buttonVariants}
                 whileHover="hover"

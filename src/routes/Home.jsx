@@ -68,7 +68,7 @@ const Home = () => {
 
         <div
           id="info-box"
-          className="absolute top-[17rem] left-10 flex flex-col text-center justify-center w-[28rem] h-[12rem] border border-neutral-700 rounded-lg bg-neutral-600/30 z-20 backdrop-blur-sm"
+          className="absolute top-[19rem] left-10 flex flex-col text-center justify-center w-[28rem] h-[12rem] border border-neutral-700 rounded-lg bg-neutral-600/30 z-20 backdrop-blur-sm"
           style={{ willChange: "transform, opacity" }}
         >
           <h1 className="text-4xl text-white font-semibold">
