@@ -40,9 +40,9 @@ const Home = () => {
 
   // console.log("[scrollY]", scrollY);
 
-  const isHidden = useTransform(scrollY, [0, 2010], ["visible", "hidden"]);
-  const globeOpacity = useTransform(scrollY, [1900, 2020], [1, 0]);
-  const globeScale = useTransform(scrollY, [1550, 2010], [1, 0]);
+  // const isHidden = useTransform(scrollY, [0, 2010], ["visible", "hidden"]);
+  // const globeOpacity = useTransform(scrollY, [1900, 2020], [1, 0]);
+  // const globeScale = useTransform(scrollY, [1550, 2010], [1, 0]);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowGlobe(true), 0);
