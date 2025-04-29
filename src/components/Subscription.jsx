@@ -73,7 +73,7 @@ const Subscription = () => {
     <div className="">
       <div className="h-24 text-4xl flex items-center justify-center t-24 flex-col gap-4">
         <h2>Subscription</h2>
-        <p className="text-lg">
+        <p className="text-lg mx-2">
           Choose the perfect plan to accelerate your Python journey
         </p>
       </div>
@@ -105,13 +105,13 @@ const Subscription = () => {
         </p>
       </div>
       <motion.section
-        className="flex items-center justify-around"
+        className="flex flex-col lg:flex-row items-center justify-around"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
       >
         <motion.article
-          className="border duration-300 border-white w-3/12 h-full overflow-hidden rounded-lg"
+          className="border duration-300 border-white w-11/12 md:w-3/12 h-full overflow-hidden rounded-lg"
           variants={cardVariants}
           whileHover="hover"
         >
@@ -185,7 +185,7 @@ const Subscription = () => {
           </div>
         </motion.article>
         <motion.article
-          className="border duration-300 border-white w-3/12 h-full overflow-hidden rounded-lg"
+          className="border duration-300 border-white mt-16 md:mt-0 w-11/12 md:w-3/12 h-full overflow-hidden rounded-lg"
           variants={cardVariants}
           whileHover="hover"
           transition={{ delay: 0.1 }}
@@ -284,7 +284,7 @@ const Subscription = () => {
         </motion.article>
 
         <motion.article
-          className="border border-white w-3/12 h-full overflow-hidden rounded-lg duration-300"
+          className="border border-white w-11/12 md:w-3/12 h-full overflow-hidden rounded-lg duration-300 mt-8 md:mt-0"
           variants={cardVariants}
           whileHover="hover"
           transition={{ delay: 0.2 }}

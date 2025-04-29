@@ -7,6 +7,8 @@ import AI_benifits from "../components/AI_benifits";
 import Subscription from "../components/Subscription";
 import Footer from "../components/Footer";
 
+import Mobile_background from "../assets/mobile_backgrounds.png";
+
 import Services from "../components/Services";
 
 const Home = () => {
@@ -51,24 +53,32 @@ const Home = () => {
     // <div>
     <div className="overflow-hidden">
       <div className="w-screen h-screen overflow-hidden ">
-        <main className="w-screen h-screen scale-125 pointer-events-none overflow-hidden z-0">
+        <main className="w-screen h-screen scale-125 pointer-events-none overflow-hidden z-0 hidden lg:flex">
           <Spline scene="https://prod.spline.design/mnIabtus1KTu10TJ/scene.splinecode" />
         </main>
+        <img
+          className="w-screen h-screen scale-125 pointer-events-none overflow-hidden z-50 flex lg:hidden"
+          src={Mobile_background}
+          alt="background"
+        />
 
         <motion.div
           id="globe"
-          className="fixed top-16 overflow-hidden pointer-events-none rounded-full flex w-full h-full z-50 will-change-transform"
+          className="fixed top-16 overflow-hidden pointer-events-none rounded-full w-full h-full z-50 will-change-transform"
           style={{
             left: globeLeft,
             zIndex: globeZIndex,
           }}
         >
-          <Spline scene="https://prod.spline.design/1reIxRbAcgFOADzP/scene.splinecode" />
+          <Spline
+            className="hidden lg:flex"
+            scene="https://prod.spline.design/1reIxRbAcgFOADzP/scene.splinecode"
+          />
         </motion.div>
 
         <div
           id="info-box"
-          className="absolute top-[19rem] left-10 flex flex-col text-center justify-center w-[28rem] h-[12rem] border border-neutral-700 rounded-lg bg-neutral-600/30 z-20 backdrop-blur-sm"
+          className="absolute top-[19rem] left-10 flex flex-col text-center justify-center w-auto px-8 py-4 h-[12rem] lg:w-auto border border-neutral-700 rounded-lg bg-neutral-600/30 z-20 backdrop-blur-sm"
           style={{ willChange: "transform, opacity" }}
         >
           <h1 className="text-4xl text-white font-semibold">

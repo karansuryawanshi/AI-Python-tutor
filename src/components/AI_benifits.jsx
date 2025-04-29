@@ -22,7 +22,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2 flex items-end justify-center"
+          className="w-full md:w-1/2  flex items-end justify-center"
         >
           <div className="w-3/4 backdrop-blur-lg z-50 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2">
             <div className="w-16 h-16 text-white">
@@ -38,7 +38,7 @@ const AI_benifits = () => {
           </div>
         </motion.div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 hidden md:block">
           <Typewrite />
         </div>
       </div>
@@ -50,7 +50,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2"
+          className="w-1/2 hidden md:block"
         >
           <div className="flex items-center justify-center">
             <img src={machineLearning} alt="" width={"600px"} />
@@ -62,7 +62,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2 flex items-end justify-center "
+          className="flex items-end justify-center w-full md:w-1/2 "
         >
           <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2 backdrop-blur-lg z-50">
             <div className="w-16 h-16 text-white z-50 backdrop-blur-lg">
@@ -86,7 +86,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2 flex items-end justify-center "
+          className="flex items-end justify-center w-full md:w-1/2"
         >
           <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2 z-50 backdrop-blur-lg">
             <div className="w-16 h-16 text-white">
@@ -108,7 +108,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2"
+          className="w-1/2 hidden md:block"
         >
           <div className="flex items-center justify-center">
             <img src={DataScience} alt="" width={"500px"} />
@@ -123,7 +123,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2"
+          className="w-1/2 hidden md:block"
         >
           <div className="flex items-center justify-center">
             <img src={AI_image} alt="" width={"500px"} />
@@ -135,7 +135,7 @@ const AI_benifits = () => {
             opacity: [0, 1],
           }}
           transition={{ delay: 0.2, duration: 0.3, ease: "easeOut" }}
-          className="w-1/2 flex items-end justify-center"
+          className="flex items-end justify-center w-full md:w-1/2"
         >
           <div className=" w-3/4 border-2 bg-neutral-600/10 rounded-lg border-white flex flex-col items-center gap-4 px-4 py-2 z-50 backdrop-blur-lg">
             <div className="w-16 h-16 text-white">
