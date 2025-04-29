@@ -9,7 +9,10 @@ import { motion } from "framer-motion";
 const Services = () => {
   return (
     <>
-      <div className="card1 flex items-center justify-center sticky top-[16rem] w-screen h-auto lg:items-end mt-[16rem] lg:justify-end backdrop-blur-sm">
+      <h2 className="text-white text-xl mx-auto flex items-center my-8 font-semibold lg:hidden">
+        Advantages
+      </h2>
+      <div className="card1 flex items-center justify-center sticky top-0 lg:top-[16rem] w-screen h-auto lg:items-end mt-0 lg:mt-[16rem] lg:justify-end backdrop-blur-sm">
         <div className="w-screen lg:w-2/4 flex items-center justify-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 50 }}

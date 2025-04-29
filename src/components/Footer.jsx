@@ -110,7 +110,7 @@ const Footer = () => {
               </h3>
               <form
                 onSubmit={handleSubscribe}
-                className="flex flex-col md:flex-row gap-2"
+                className="flex flex-col lg:flex-row gap-2"
               >
                 <input
                   type="email"

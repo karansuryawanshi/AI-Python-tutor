@@ -96,7 +96,7 @@ const Home = () => {
         </div>
       </div>
       <div className="relative">
-        <div className="bg-gradient-to-b from-black via-zinc-900 to-black flex flex-col gap-[16rem] text-neutral-300">
+        <div className="bg-gradient-to-b from-black via-zinc-900 to-black flex flex-col gap-[10rem] lg:gap-[16rem] text-neutral-300">
           <Services></Services>
         </div>
         <div className="bg-gradient-to-b from-black via-zinc-900 to-black">

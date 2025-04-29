@@ -111,7 +111,7 @@ const Subscription = () => {
         whileInView="visible"
       >
         <motion.article
-          className="border duration-300 border-white w-11/12 md:w-3/12 h-full overflow-hidden rounded-lg"
+          className="border duration-300 border-white w-11/12 lg:w-3/12 h-full overflow-hidden rounded-lg"
           variants={cardVariants}
           whileHover="hover"
         >
@@ -185,7 +185,7 @@ const Subscription = () => {
           </div>
         </motion.article>
         <motion.article
-          className="border duration-300 border-white mt-16 md:mt-0 w-11/12 md:w-3/12 h-full overflow-hidden rounded-lg"
+          className="border duration-300 border-white mt-16 lg:mt-0 w-11/12 lg:w-3/12 h-full overflow-hidden rounded-lg"
           variants={cardVariants}
           whileHover="hover"
           transition={{ delay: 0.1 }}
@@ -284,7 +284,7 @@ const Subscription = () => {
         </motion.article>
 
         <motion.article
-          className="border border-white w-11/12 md:w-3/12 h-full overflow-hidden rounded-lg duration-300 mt-8 md:mt-0"
+          className="border border-white w-11/12 lg:w-3/12 h-full overflow-hidden rounded-lg duration-300 mt-8 lg:mt-0"
           variants={cardVariants}
           whileHover="hover"
           transition={{ delay: 0.2 }}
